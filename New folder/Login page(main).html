@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Brygada+1918:ital,wght@0,400..700;1,400..700&display=swap"
+        rel="stylesheet">
+
+    <title>
+        MATERNAL AND CHILD RECORDS
+    </title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: rgb(178, 195, 203);
+            font-family: 'Brygada 1918', serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            min-height: 100vh;
+            flex-wrap: wrap;
+        }
+
+        .thumb{
+            width: 120%;
+            height: 120%;
+            display: inline-block;
+            opacity: 0.9;
+            margin-left: 60%;
+            max-width: 100%;
+        }
+        
+        .text-block {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-right: 100px;
+        }
+
+        h1 {
+            font-size: 40px;
+            color: black;
+            text-decoration: dotted;
+        }
+
+        h4 {
+            color: black;
+        }
+
+        .toggle {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+
+        .toggle button {
+            background-color:#507d80a3;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            margin: 0 5px;
+        }
+
+        .login-form {
+            display: none;
+        }
+
+        .login-form.active {
+            display: block;
+        }
+
+        label,
+        input {
+            display: block;
+            height: 25px;
+            width: 300px;
+            max-width: 100%;
+            margin-bottom: 10px;
+        }
+       
+        button[type="submit"] {
+            background-color: #507d80a3;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        p {
+            margin-top: 20px;
+            display: inline-block;
+        }
+
+        a {
+            text-decoration: none;
+        }
+        #tick{
+            display: inline-block;
+            position: relative;
+            left: -140px;
+        }
+       h4{
+        position:relative;
+        top:-50px;
+        left: 30px;
+        font-size: 15px;
+        color: rgb(64, 63, 63);
+       }
+       #personel-button{
+        position: relative;
+        margin-top:-100px;
+       }
+
+       /* Media Queries for responsiveness */
+        @media (max-width: 900px) {
+            body {
+                flex-direction: column;
+                justify-content: center;
+                padding: 20px 0;
+            }
+
+            .thumb {
+                width: 80%;
+                height: auto;
+                margin-left: 0;
+                order: 1;
+            }
+
+            .text-block {
+                margin-right: 0;
+                order: 2;
+                padding: 0 20px;
+            }
+        }
+
+        @media (max-width: 600px) {
+            body {
+                flex-direction: column;
+                justify-content: flex-start;
+                padding: 20px 10px;
+            }
+
+            .thumb {
+                width: 90%;
+                height: auto;
+                margin-left: 0;
+            }
+
+            h1 {
+                font-size: 28px;
+            }
+
+            .text-block {
+                margin-right: 0;
+                align-items: center;
+                width: 100%;
+            }
+
+            .toggle {
+                width: 100%;
+                justify-content: center;
+            }
+
+            .toggle button {
+                flex: 1 1 auto;
+                min-width: 120px;
+                margin: 5px;
+            }
+
+            label,
+            input {
+                width: 100%;
+            }
+
+            button[type="submit"] {
+                width: 100%;
+            }
+
+            #tick {
+                left: 0;
+            }
+
+            h4 {
+                left: 10px;
+                top: -30px;
+            }
+
+            .forgot {
+                text-align: center;
+            }
+
+            .dont {
+                text-align: center;
+                display: block;
+                padding: 0 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <img class="thumb" src="../New folder/Photos/Picture1.png" alt="woman holding her baby">
+    </div>
+
+    <div class="text-block">
+        <div>
+            <h1>LOGIN</h1>
+            <div class="toggle">
+                <button id="personnelBtn" onclick="showPersonnelLogin()">Health Personnel</button>
+                <button id="patientBtn" onclick="showPatientLogin()">Patient</button>
+            </div>
+            <div id="personnelLogin" class="login-form active">
+                <form>
+                    <label for="personnel-email">Work ID:</label>
+                    <input type="email" id="personnel-email" name="email" required>
+
+                    <label for="personnel-password">Password:</label>
+                    <input type="password" id="personnel-password" name="password" required>
+                    <input  type="checkbox" id="tick"><h4> Remember me</h4>
+                    <button type="submit" id="personel-button">Login as Personnel</button>
+                </form>
+                
+                
+               
+            </div>
+            <div id="patientLogin" class="login-form">
+                <form>
+                    <label for="patient-email">Email:</label>
+                    <input type="email" id="patient-email" name="email" required>
+
+                    <label for="patient-password">Password:</label>
+                    <input type="password" id="patient-password" name="password" required>
+                    <input  type="checkbox" id="tick"><h4> Remember me</h4>
+
+                    <a href="./home page.css"><button type="submit">Login as Patient</button></a>
+                </form> 
+                <div class="forgot">
+                    <a href="">Forgot password?</a>
+                </div>
+
+                
+
+            </div>
+            </div>
+
+            <p class="dont"> Don't have an account? <a href="./Signup page.html">SIGN UP</a></p>
+        </div>
+    </div>
+
+    <script>
+        function showPersonnelLogin() {
+            document.getElementById('personnelLogin').classList.add('active');
+            document.getElementById('patientLogin').classList.remove('active');
+        }
+
+        function showPatientLogin() {
+            document.getElementById('personnelLogin').classList.remove('active');
+            document.getElementById('patientLogin').classList.add('active');
+        }
+    </script>
+</body>
+
+</html>

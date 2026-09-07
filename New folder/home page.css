@@ -1,0 +1,55 @@
+.navbar{
+    padding-top: 0;
+    padding-bottom: 0;
+}
+body{
+    
+}
+
+ .carousel-item {
+      height: 500px; /* Adjust based on your design needs */
+ }
+.carousel-item img {
+      object-fit: cover;
+      height: 100%;
+      width: 100%;
+}
+
+
+.health-navbar {
+    background-color: rgb(226, 238, 243);
+  }
+  
+  .navbar-brand {
+    color: #00796b; /* Teal */
+    font-weight: bold;
+    font-size: 1.5rem;
+  }
+  
+  .navbar-nav .nav-link {
+    color: #00796b; 
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+  }
+  
+  .navbar-nav .nav-link:hover {
+    color: #004d40; /* Darker teal */
+  }
+  
+  .navbar-nav .nav-item.active .nav-link {
+    color: #004d40; /* Darker teal */
+  }
+  
+  .navbar-toggler-icon {
+    background-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg"><path stroke="rgba(0, 121, 107, 0.5)" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" d="M4 7h22M4 15h22M4 23h22"/></svg>');
+  }
+
+#hanging-icons > div > div:nth-child(1) > div.icon-square.text-body-emphasis.bg-body-secondary.d-inline-flex.align-items-center.justify-content-center.fs-4.flex-shrink-0.me-3 > img{
+  background-color:  rgb(226, 238, 243);
+}
+#hanging-icons > div > div:nth-child(2) > div.icon-square.text-body-emphasis.bg-body-secondary.d-inline-flex.align-items-center.justify-content-center.fs-4.flex-shrink-0.me-3 > img{
+  background-color:  rgb(226, 238, 243);
+}
+#hanging-icons > div > div:nth-child(3) > div.icon-square.text-body-emphasis.bg-body-secondary.d-inline-flex.align-items-center.justify-content-center.fs-4.flex-shrink-0.me-3 > img{
+  background-color:  rgb(226, 238, 243);
+}
